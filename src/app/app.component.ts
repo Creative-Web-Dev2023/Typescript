@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { Person } from './interfaces/person.interfaces'; // Adjust the import path as necessary
+
 
 @Component({
   selector: 'app-root',
@@ -9,18 +11,14 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
+
 export class AppComponent {
-  person: {
-    readonly name:string | number;
-    age: number;
-    position?: string;
-  } = {
+  person : Person = {
     name:"Flo",
     age: 30,
-    position: "Developer"
   }
-  // This will not cause an error because name can be a string or a number
+
   constructor() {
-    this.person.position = "Developer"; 
+    this.person.name = 12; 
   }
 }
