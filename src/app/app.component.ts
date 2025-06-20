@@ -12,13 +12,24 @@ import { Person } from './interfaces/person.interfaces'; // Adjust the import pa
   styleUrl: './app.component.scss',
 })
 
+// export class AppComponent {
+//   fruit ="";
+//  fruitList =["Banana"];
+
+//   constructor() {
+//     this.fruit = this.fruitList.pop()!;
+//   }
+// }
 export class AppComponent {
-  person : Person = {
-    name:"Flo",
-    age: 30,
-  }
+ fruit ="";
+ fruitList =["Banana"];
 
   constructor() {
-    this.person.name = 12; 
-  }
+   let banana = this.fruitList.pop();
+   if (banana !== undefined) {
+     this.fruit = banana;
+   }else {
+     banana
+   }
 }
+ }
